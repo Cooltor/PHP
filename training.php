@@ -244,3 +244,124 @@ switch ($couleur){
         break;
 }
 
+
+echo '<h2>Les fonctions prédéfinies</h2>';
+// Une fonction prédéfinie permet de realiser un traitement spécifique
+
+print date(('d/m/Y')); // La fonction renvoie la date.
+echo '<br>';
+print date(('d/m/y'));
+echo '<br>';
+
+$email = 'romaindubus86@gmail.com';
+echo strpos($email, '@'); // strpos() permet de trouver la position de la 1ère occurence ds la chaîne
+echo '<br>';
+
+$email2 = 'gregleouf';
+echo strpos($email2, '@'); 
+
+var_dump(strpos($email2, '@'));  // renvoie false 
+echo '<br>';
+
+// var_dump() est une instrution d'affichage améliorée 
+
+$phrase = 'Bonjour tout le monde, Ceci est un cours de PHP';
+echo iconv_strlen($phrase);
+echo '<br>';
+
+$texte = "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page,
+            le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+            Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.";
+
+// substr() permet de retourner une partie d'une chaîne de caractère
+
+echo substr($texte,0,20);
+echo "<br>";
+echo substr($texte,0,100) ."...<a href=''>Lire la suite </a>";
+echo "<br>";
+
+
+echo '<h2> Les fonctions utilisateurs</h2>';
+
+function separation() {     // déclaration de la fonction
+
+    echo "<hr><hr><hr>";   // ce que fait la fonction
+
+}
+
+separation();  // execution de la fonction
+echo "<br>"; 
+
+
+// Fonction avec argument
+
+function bonjour($qui) {
+
+    return "Bonjour $qui";
+
+}
+
+echo bonjour('Pietric');
+echo "<br>"; 
+
+$prenom3 = "Bouffon";
+
+echo bonjour($prenom3);
+echo "<br>";
+
+function appliqueTva($nombre) {
+
+    return $nombre *1.2;
+
+}
+
+echo appliqueTva(100);
+echo "<br>";
+
+function appliquetva2($nombre, $taux=1.2) {
+
+    return  $nombre * $taux;
+}
+
+echo appliqueTva2(10);
+echo "<br>";
+
+echo appliquetva2(1000, 1.065);
+echo "<br>";
+
+meteo("hiver", "5"); // Il est possible d'exécuter une fonction avant sa déclaration
+
+function meteo($saison, $temperature) {
+
+    echo "Nous somme en $saison et il fait $temperature degré(s).";
+
+}
+
+echo "<br>";
+
+function meteo2($saison, $temperature) {
+
+    if ($temperature > 1 || $temperature < -1) {
+
+        echo "Nous somme en $saison et il fait $temperature degrés.";
+    
+    }
+
+    else {
+
+        echo "Nous somme en $saison et il fait $temperature degré.";
+    }
+
+}
+
+meteo2("Automne", "1");
+
+echo "<br>";
+
+
+
+// note : global permet d'importer une variable de l'espace global ds l'espace local
+
+
+
+
