@@ -470,6 +470,8 @@ for($year=date("Y"); $year >= $yearOld; $year--){
 }
 echo "</select>";
 
+echo "<br>";
+
 
 // Faire une boucle qui affiche de 0 à 99 ds une table HTML (chaque ligne doit contenir 10 chiffres)
 
