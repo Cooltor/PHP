@@ -358,9 +358,62 @@ meteo2("Automne", "1");
 
 echo "<br>";
 
+function jour()
+{
+    $jour = 'Mercredi'; // cette variable n'existe que dans cette fonction
+    return $jour;
+}
+
+echo jour();
+
+$day = jour();
+echo "<br>";
+echo $day;
 
 
-// note : global permet d'importer une variable de l'espace global ds l'espace local
+$pays = 'France';
+
+function affichePays()
+{
+    global $pays; // global permet d'importer une variable de l'espace global dans l'espace local
+
+    echo $pays;
+}
+
+echo "<br>";
+
+affichePays();
+
+echo "<br>";
+
+
+//!\\ PHP7 : On peut préciser le type en amont 
+
+function qui(string $prenom, int $age) {
+
+    return $prenom . ' a ' . $age . ' ans.';
+
+}
+
+
+echo qui("Luc", 23);
+echo "<br>";
+
+
+//!\\ PHP7 : On peut préciser en amont la valeur de reour
+
+function isMajeur(int $age) : bool {
+
+    return $age >= 18;
+
+}
+
+var_dump(isMajeur(15));
+echo "<br>";
+
+var_dump(isMajeur(22));
+
+
 
 
 
