@@ -414,7 +414,95 @@ echo "<br>";
 var_dump(isMajeur(22));
 
 
+echo '<h2>Structure itérative</h2>';
+
+// WHILE
+
+$i = 0;  // Valeur de départ
+
+while ($i < 5) { // Tant que $i inférieur à 5
+
+    echo "$i ~~ "; // j'affiche $i~~
+
+    $i++;  // Re$i = $i+1
+
+}
+
+echo "<br>"; 
+
+// jusque 9 exo
+
+while($i <= 9) {
+
+    if($i < 9){
+
+    echo "$i~~";
+    $i++;
+
+} else {
+
+    echo "$i";
+    $i++;
+}
+}
+
+echo "<br>";
+
+// Boucle for
+
+
+for($j=0; $j<10; $j++){   // $j=10 valeur de départ / $j<10 condition d'entrée / $j++ sens d'incrémentation
+
+    echo $j . "<br>";
+
+}
+
+echo "<br>";
 
 
 
+$year=date("Y");
+$yearOld = $year - 100;
 
+echo "<select>";
+for($year=date("Y"); $year >= $yearOld; $year--){
+    echo "<option>$year</option>";
+}
+echo "</select>";
+
+
+// Faire une boucle qui affiche de 0 à 99 ds une table HTML (chaque ligne doit contenir 10 chiffres)
+
+echo "<table border='2'><tr>";
+    for($i=0; $i<100; $i++)
+    {
+        if($i % 10 == 0)
+        {
+            echo "</tr>";
+        }
+
+        echo "<td>".$i."</td>";
+    }
+
+echo"</table>";
+
+echo "<br>";
+
+// OU
+
+$nb =0;
+
+echo '<table border="2">';
+
+for($ligne = 0; $ligne<10; $ligne++)
+{
+    echo "<tr>";
+    for($cellulle = 0; $cellulle <10 ; $cellulle++)
+    {
+        echo "<td>". $nb . "</td>";
+        $nb++;
+    }
+    echo "</tr>";
+}
+
+echo '</table>';
