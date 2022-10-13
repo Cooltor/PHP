@@ -1,5 +1,10 @@
 <?php
 
+
+// $_POST est une superglobale, donc un array()
+// permet de récupérer les infos d'un form
+
+
 if($_POST) {
 
 echo $_POST['prenom'] . '<br>';
@@ -8,20 +13,6 @@ echo $_POST['description'] . '<br>';
 }
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!DOCTYPE html>
@@ -35,7 +26,7 @@ echo $_POST['description'] . '<br>';
 <body>
 
     <h1>Formulaire</h1>
-    <form action="" method="POST">
+    <form action="" method="POST"> <!--method: comment les données seront véhiculées -->
 
         <label for="prenom">Prénom :</label><br>
         <input type="text" name="prenom" id="prenom"><br><br>
