@@ -510,3 +510,118 @@ for($ligne = 0; $ligne<10; $ligne++)
 echo '</table>';
 
 
+// Inclusion et REQUIRE voir site inclusion
+
+
+echo '<h2> Les tableaux </h2>';
+
+
+// Un tableau est une variable permettant de stocker un ensemble de valeur
+
+$liste = array('Nicolas','Cathy', 'Romain');
+
+$liste2 = ['Dylan', 'Liam', 'Jhon'];
+
+print_r($liste);
+echo"<br>";
+
+echo "<pre>";    // <pre> balise HTML qui permet de formater le texte
+print_r($liste); 
+echo "</pre>";
+
+echo"<br>";
+
+echo "<pre>";
+var_dump($liste);  // var_dump affiche le contenu du tableau avec ses infos comp : taille, type de valeur 
+echo "</pre>";
+
+echo "<br>";
+
+echo $liste[2];
+echo "<br><br><br>";
+
+
+// for each
+
+foreach($liste as $value) {
+
+    echo $value . "<br>";
+
+}
+
+echo "<br>";
+
+foreach($liste as $key=>$value) {
+
+    echo $key .": " . $value . "<br>";
+
+}
+
+
+// count() ou sizeoff() : permet de savoir la taille du tableau
+
+echo "la taille du tableau est:". count($liste);
+
+
+// Tableau multidimensionnel
+
+$tab_multi = array(
+                0 => array("prenom" => "Julien", "nom" => "DUJEAN"),
+                1 => array("prenom" => "Philippe", "nom" => "MARK"),
+);
+
+echo "<pre>";
+print_r($tab_multi);
+echo "</pre>";
+
+echo "<br/>";
+
+echo $tab_multi[1]['prenom'];
+
+echo "<br>";
+
+for($i=0; $i<count($tab_multi); $i++) {
+
+    echo $tab_multi[$i]['prenom'] . "<br>";
+
+}
+
+echo "<br>";
+
+
+echo '<h2>Les objets</h2>';
+
+
+class Etudiant {
+
+    public $prenom = 'Robert';
+    protected $nom = 'ALAIN';
+    private $age = 22;
+
+    public function pays() {
+
+        return "France";
+
+    }
+
+}
+
+
+$etudiant1 = new Etudiant();
+
+echo $etudiant1->prenom;
+
+echo "<br>";
+
+echo $etudiant1->pays();
+
+echo "<br>";
+
+echo "<pre>";
+var_dump($etudiant1);
+echo "</pre>";
+
+echo "<br>";
+
+
+
