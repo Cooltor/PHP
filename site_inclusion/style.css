@@ -1,0 +1,39 @@
+html{
+    font-size: 16px;
+    line-height: 150%;
+}
+
+#container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: antiquewhite;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav, footer{
+    height: 2rem;
+    background-color: rgb(118, 20, 118);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    line-height: 2rem;
+}
+
+section{
+    padding: 1rem;
+    text-align: center;
+}
+
+footer{
+    color: white;
+}

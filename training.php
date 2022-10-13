@@ -468,7 +468,7 @@ echo "<select>";
 for($year=date("Y"); $year >= $yearOld; $year--){
     echo "<option>$year</option>";
 }
-echo "</select>";
+echo "</select><br>";
 
 echo "<br>";
 
@@ -508,3 +508,5 @@ for($ligne = 0; $ligne<10; $ligne++)
 }
 
 echo '</table>';
+
+
