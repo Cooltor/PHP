@@ -1,14 +1,3 @@
-<?php
-
-//$_POST est une superglobale donc un array()
-// Permet de récupérer des infos en POST via un formulaire par exemple
-if($_POST)// au clic sur le bouton
-{
-    echo $_POST['prenom']." ".$_POST['nom']." ".$_POST['mail']." ".$_POST['adresse']." ".$_POST['zip']." ".$_POST['ville']." ".$_POST['pays']." ".$_POST['description'];
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +16,7 @@ if($_POST)// au clic sur le bouton
     
     <h1>Formulaire</h1>
 
-    <form action="" method="POST"> <!-- method : comment les données vont circuler // action : dans quel fichier le traîtement sera fait -->
+    <form action="formulaire4.php" method="POST"> <!-- method : comment les données vont circuler // action : dans quel fichier le traîtement sera fait -->
         <!-- Prenom -->
         <label for="prenom">Prénom :</label>
         <input type="text" name="prenom" id="prenom"> <br> <!--  il ne faut pas oublier le name -->
