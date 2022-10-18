@@ -1,39 +1,25 @@
-html{
-    font-size: 16px;
-    line-height: 150%;
+#container {
+    margin: 0;
+    width: 1000px;
+    box-shadow: 1px 1px 6px;
 }
 
-#container{
-    width: 80%;
-    margin: 0 auto;
-}
-
-header{
+header {
     background-color: antiquewhite;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav, footer{
-    height: 2rem;
-    background-color: rgb(118, 20, 118);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
 }
 
 nav a{
-    color: white;
+    color: whitesmoke;
     text-decoration: none;
-    margin: 0 1rem;
-    line-height: 2rem;
+    margin: O 30px;
 }
 
-section{
-    padding: 1rem;
-    text-align: center;
+nav, footer{
+    height: 30px;
+    background-color: #ad5389;
 }
 
-footer{
-    color: white;
+section {
+    padding: 20px;
 }
